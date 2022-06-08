@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/minding-mapping-tool/static/css/main.3c3e8b57.css",
+    "main.js": "/minding-mapping-tool/static/js/main.f9a324ca.js",
+    "static/js/787.c928e31e.chunk.js": "/minding-mapping-tool/static/js/787.c928e31e.chunk.js",
+    "index.html": "/minding-mapping-tool/index.html",
+    "main.3c3e8b57.css.map": "/minding-mapping-tool/static/css/main.3c3e8b57.css.map",
+    "main.f9a324ca.js.map": "/minding-mapping-tool/static/js/main.f9a324ca.js.map",
+    "787.c928e31e.chunk.js.map": "/minding-mapping-tool/static/js/787.c928e31e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c3e8b57.css",
+    "static/js/main.f9a324ca.js"
+  ]
+}
