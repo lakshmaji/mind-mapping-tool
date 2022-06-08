@@ -1,4 +1,4 @@
-import create from 'zustand';
+import create from "zustand";
 import {
   Connection,
   Edge,
@@ -11,10 +11,15 @@ import {
   OnConnect,
   applyNodeChanges,
   applyEdgeChanges,
-} from 'react-flow-renderer';
+} from "react-flow-renderer";
 
-import initialNodes from './nodes';
-import initialEdges from './edges';
+import initialNodes from "./nodes";
+import initialEdges from "./edges";
+
+export type NodeData = {
+  color: string;
+  text?: string;
+};
 
 type RFState = {
   nodes: Node[];
@@ -22,9 +27,9 @@ type RFState = {
   onNodesChange: OnNodesChange;
   onEdgesChange: OnEdgesChange;
   onConnect: OnConnect;
+  addNode: (node: Node<NodeData>) => void;
 };
 
-// this is our useStore hook that we can use in our components to get parts of the store and call actions
 const useStore = create<RFState>((set, get) => ({
   nodes: initialNodes,
   edges: initialEdges,
@@ -41,6 +46,11 @@ const useStore = create<RFState>((set, get) => ({
   onConnect: (connection: Connection) => {
     set({
       edges: addEdge(connection, get().edges),
+    });
+  },
+  addNode(node: Node<NodeData>) {
+    set({
+      nodes: [...get().nodes, node],
     });
   },
 }));

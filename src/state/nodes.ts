@@ -1,13 +1,12 @@
 import { Node } from 'react-flow-renderer';
 
-export default [
+const nodes :Node[] = [
   {
     id: '1',
     type: 'input',
     data: { label: 'Input' },
     position: { x: 250, y: 25 },
   },
-
   {
     id: '2',
     data: { label: 'Default' },
@@ -19,4 +18,6 @@ export default [
     data: { label: 'Output' },
     position: { x: 250, y: 250 },
   },
-] as Node[];
+];
+
+export default nodes
